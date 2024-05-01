@@ -1,19 +1,18 @@
-import React, { useRef } from 'react';
-import { useScroll, useTransform, motion } from 'framer-motion';
-import Picture1 from '../assets/images/p1.jpg';
-import Picture2 from '../assets/images/p2.jpg';
-import Picture3 from '../assets/images/p3.jpg';
-import Picture4 from '../assets/images/p4.jpg';
-import Picture5 from '../assets/images/p5.jpg';
-import Picture6 from '../assets/images/p6.jpg';
-import Picture7 from '../assets/images/p7.jpg';
-
+import React, { useRef } from "react";
+import { useScroll, useTransform, motion } from "framer-motion";
+import Picture1 from "../assets/images/p1.jpg";
+import Picture2 from "../assets/images/p2.jpg";
+import Picture3 from "../assets/images/p3.jpg";
+import Picture4 from "../assets/images/p4.jpg";
+import Picture5 from "../assets/images/p5.jpg";
+import Picture6 from "../assets/images/p6.jpg";
+import Picture7 from "../assets/images/p7.jpg";
 
 function Parallax() {
   const ParallaxContainer = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ParallaxContainer,
-    offset: ['start start', 'end end'],
+    offset: ["start start", "end end"],
   });
 
   const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4]);
@@ -39,13 +38,6 @@ function Parallax() {
           <motion.div style={{ scale }} key={index} className="el">
             <div className="imageContainer">
               <img src={src} alt="image" />
-              {index === -1 && ( // Checking if it's the first picture
-                <div className="textOverlay">
-                  <p>Speed kills, but thrills</p>
-                </div>
-              )}
-              
-
             </div>
           </motion.div>
         ))}

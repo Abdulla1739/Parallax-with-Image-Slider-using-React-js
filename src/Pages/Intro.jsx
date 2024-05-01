@@ -1,15 +1,13 @@
-import React, { useEffect } from 'react';
-import Introduction from '../Components/Introduction';
-import Home from './Home';
-import Slider from '../Components/Slider';
-import Description from '../Components/Description';
-// import LocomotiveScroll from 'locomotive-scroll';
-
+import React, { useEffect } from "react";
+import Introduction from "../Components/Introduction";
+import Home from "./Home";
+import Slider from "../Components/Slider";
+import Description from "../Components/Description";
 
 function Intro() {
   useEffect(() => {
     (async () => {
-      const LocomotiveScroll = (await import('locomotive-scroll')).default;
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
       const locomotiveScroll = new LocomotiveScroll();
     })();
   }, []);
@@ -17,11 +15,9 @@ function Intro() {
   return (
     <div>
       <Introduction />
-      <Description/>
-      {/* <Slider/> */}
+      <Description />
       <Home />
-      <Slider/>
-
+      <Slider />
     </div>
   );
 }
