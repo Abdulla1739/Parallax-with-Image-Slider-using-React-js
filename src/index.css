@@ -1,0 +1,206 @@
+.main{
+  margin-top: 3px;
+}
+body{
+  margin: 0px;
+  padding: 0;
+  background-color: rgb(24, 24, 24);
+  /* scroll-behavior: smooth !important; */
+  margin-top: 80px;
+  
+}
+
+
+.ParallaxContainer {
+  height: 300vh;
+  position: relative;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(./assets/images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.ParallaxContainer .sticky {
+  position: sticky;
+  overflow: hidden;
+  top: 0;
+  height: 100vh;
+  
+}
+
+.ParallaxContainer .sticky .el {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.ParallaxContainer .sticky .el .imageContainer {
+  position: relative;
+  width: 25vw;
+  height: 35vh;
+
+  
+}
+.ParallaxContainer .sticky .el .imageContainer img{
+  object-fit: cover;
+  width: 100%;
+
+
+}
+
+.ParallaxContainer .sticky .el:nth-of-type(2) .imageContainer {
+  top: -36vh;
+  width: 25vw;
+  height: 30vh;
+}
+.ParallaxContainer .sticky .el:nth-of-type(2) .imageContainer img{
+  width: 25vw;
+  height: 14.5vw;
+  object-position: center;
+  object-fit: cover;
+
+}
+
+.ParallaxContainer .sticky .el:nth-of-type(3) .imageContainer {
+  top: -50vh;
+  left: -30.5vw;
+  width: 15vw;
+  height: 1vh;
+}
+.ParallaxContainer .sticky .el:nth-of-type(3) .imageContainer img{
+  width: 25vw;
+  height: 23.5vw;
+  object-position: center;
+  object-fit: cover;
+}
+
+
+.ParallaxContainer .sticky .el:nth-of-type(4) .imageContainer {
+  bottom: -15vw;
+  width: 25vw;
+  height: 25vh;
+}
+.ParallaxContainer .sticky .el:nth-of-type(4) .imageContainer img{
+  width: 25vw;
+  height: 12.5vw;
+  object-position: center;
+  object-fit: cover;
+
+}
+
+
+
+.ParallaxContainer .sticky .el:nth-of-type(5) .imageContainer {
+  top: 14vh;
+  left: 23vw;
+  width: 20vw;
+  height: 25vh;
+}
+.ParallaxContainer .sticky .el:nth-of-type(5) .imageContainer img{
+  width: 25vw;
+  height: 21vw;
+  object-position: center;
+  object-fit: cover;
+}
+
+
+
+.ParallaxContainer .sticky .el:nth-of-type(6) .imageContainer {
+  top: 14.5vh;
+  left: -30.5vw;
+  width: 15vw;
+  height: 25vh;
+}
+.ParallaxContainer .sticky .el:nth-of-type(6) .imageContainer img{
+  width: 25vw;
+  height: 21vw;
+  object-position: center;
+  object-fit: cover;
+
+
+}
+
+.ParallaxContainer .sticky .el:nth-of-type(7) .imageContainer {
+  top: -50vh;
+  left: 19vw;
+  width: 12vw;
+  height: 20vh;
+}
+.ParallaxContainer .sticky .el:nth-of-type(7) .imageContainer img{
+  width: 25vw;
+  height: 27.5vw;
+  object-position: center;
+  object-fit: cover;
+
+}
+
+
+
+@keyframes slide {
+  from {
+      transform: translateX(0);
+  }
+
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 0;
+  padding-top: 2%;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 20vh;
+  width: 20vw;
+  margin: 0 10px;
+  border-radius: 2%;
+}
+.discovery{
+  width: 100%;
+  height: 350px;
+  background-color: black;
+  text-align: center;
+  font-size: 1.5VW;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color: #afa18f;
+}
